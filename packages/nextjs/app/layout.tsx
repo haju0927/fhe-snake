@@ -18,7 +18,7 @@ const DappWrapper = ({ children }: { children: React.ReactNode }) => {
           rel="stylesheet"
         />
       </head>
-      <body>
+      <body className="bg-gradient-to-b from-black via-green-950 to-black">
         <ThemeProvider enableSystem>
           <DappWrapperWithProviders>{children}</DappWrapperWithProviders>
         </ThemeProvider>
