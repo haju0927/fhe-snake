@@ -1,19 +1,21 @@
-# FHEVM React Template
+# 🐍 FHE Snake React DApp
 
-A minimal React frontend template for building FHEVM-enabled decentralized applications (dApps). This template provides a simple development interface for interacting with FHEVM smart contracts, specifically the `FHECounter.sol` contract.
+A fun React frontend for playing **FHE Snake**, a fully homomorphic encrypted (FHE) on-chain snake game.  
+Scores are 🔒 encrypted and stored on-chain, while maintaining a global leaderboard 🌐.
 
-## 🚀 What is FHEVM?
-
-FHEVM (Fully Homomorphic Encryption Virtual Machine) enables computation on encrypted data directly on Ethereum. This template demonstrates how to build dApps that can perform computations while keeping data private.
+---
 
 ## ✨ Features
 
-- **🔐 FHEVM Integration**: Built-in support for fully homomorphic encryption
-- **⚛️ React + Next.js**: Modern, performant frontend framework
-- **🎨 Tailwind CSS**: Utility-first styling for rapid UI development
-- **🔗 RainbowKit**: Seamless wallet connection and management
-- **🌐 Multi-Network Support**: Works on both Sepolia testnet and local Hardhat node
-- **📦 Monorepo Structure**: Organized packages for SDK, contracts, and frontend
+- 🕹️ Play Snake directly in the browser.  
+- 🔒 Fully homomorphic encryption (FHE) for scores.  
+- 🔗 Connect your wallet using RainbowKit/Wagmi.  
+- 🏆 On-chain leaderboard with encrypted scores.  
+- 🎉 Confetti celebration on game over.  
+- ⏸️ Pause, 🔁 restart, and view your score & length.  
+- 🔓 Decrypt top scores when allowed.
+
+---
 
 ## 📋 Prerequinextjss
 
