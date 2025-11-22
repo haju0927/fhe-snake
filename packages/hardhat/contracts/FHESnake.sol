@@ -2,7 +2,7 @@
 pragma solidity ^0.8.24;
 
 import {FHE, euint32, externalEuint32} from "@fhevm/solidity/lib/FHE.sol";
-import {SepoliaConfig} from "@fhevm/solidity/config/ZamaConfig.sol";
+import {ZamaEthereumConfig} from "@fhevm/solidity/config/ZamaConfig.sol";
 
 /**
  * @title FHESnake
@@ -10,7 +10,7 @@ import {SepoliaConfig} from "@fhevm/solidity/config/ZamaConfig.sol";
  * The contract only keeps the player's longest encrypted length.
  * Both the player and the contract can decrypt their own encrypted data.
  */
-contract FHESnake is SepoliaConfig {
+contract FHESnake is ZamaEthereumConfig {
     // Stores the longest encrypted length for each player
     mapping(address => euint32) private _longestSnake;
     mapping(address => bool) private _isRegistered;

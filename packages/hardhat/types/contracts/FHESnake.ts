@@ -23,12 +23,16 @@ import type {
 export interface FHESnakeInterface extends Interface {
   getFunction(
     nameOrSignature:
+      | "confidentialProtocolId"
       | "getLongestLength"
       | "hasPlayed"
-      | "protocolId"
       | "updateLength"
   ): FunctionFragment;
 
+  encodeFunctionData(
+    functionFragment: "confidentialProtocolId",
+    values?: undefined
+  ): string;
   encodeFunctionData(
     functionFragment: "getLongestLength",
     values: [AddressLike]
@@ -38,20 +42,19 @@ export interface FHESnakeInterface extends Interface {
     values: [AddressLike]
   ): string;
   encodeFunctionData(
-    functionFragment: "protocolId",
-    values?: undefined
-  ): string;
-  encodeFunctionData(
     functionFragment: "updateLength",
     values: [BytesLike, BytesLike]
   ): string;
 
   decodeFunctionResult(
+    functionFragment: "confidentialProtocolId",
+    data: BytesLike
+  ): Result;
+  decodeFunctionResult(
     functionFragment: "getLongestLength",
     data: BytesLike
   ): Result;
   decodeFunctionResult(functionFragment: "hasPlayed", data: BytesLike): Result;
-  decodeFunctionResult(functionFragment: "protocolId", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "updateLength",
     data: BytesLike
@@ -101,6 +104,8 @@ export interface FHESnake extends BaseContract {
     event?: TCEvent
   ): Promise<this>;
 
+  confidentialProtocolId: TypedContractMethod<[], [bigint], "view">;
+
   getLongestLength: TypedContractMethod<
     [player: AddressLike],
     [string],
@@ -108,8 +113,6 @@ export interface FHESnake extends BaseContract {
   >;
 
   hasPlayed: TypedContractMethod<[player: AddressLike], [boolean], "view">;
-
-  protocolId: TypedContractMethod<[], [bigint], "view">;
 
   updateLength: TypedContractMethod<
     [encryptedLength: BytesLike, zkProof: BytesLike],
@@ -122,14 +125,14 @@ export interface FHESnake extends BaseContract {
   ): T;
 
   getFunction(
+    nameOrSignature: "confidentialProtocolId"
+  ): TypedContractMethod<[], [bigint], "view">;
+  getFunction(
     nameOrSignature: "getLongestLength"
   ): TypedContractMethod<[player: AddressLike], [string], "view">;
   getFunction(
     nameOrSignature: "hasPlayed"
   ): TypedContractMethod<[player: AddressLike], [boolean], "view">;
-  getFunction(
-    nameOrSignature: "protocolId"
-  ): TypedContractMethod<[], [bigint], "view">;
   getFunction(
     nameOrSignature: "updateLength"
   ): TypedContractMethod<

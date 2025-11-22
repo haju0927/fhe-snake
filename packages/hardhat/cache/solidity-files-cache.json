@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/Users/nguyentuancanh/Documents/zama/fhevm-snake/packages/hardhat/contracts/FHESnake.sol": {
-      "lastModificationDate": 1762388373514,
-      "contentHash": "738857d7ac48070e8c82d1d7133c7843",
+      "lastModificationDate": 1763823430422,
+      "contentHash": "b182abf881bd866b2b0c33d9674ab3b8",
       "sourceName": "contracts/FHESnake.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -49,8 +49,8 @@
       ]
     },
     "/Users/nguyentuancanh/Documents/zama/fhevm-snake/packages/hardhat/fhevmTemp/@fhevm/solidity/config/ZamaConfig.sol": {
-      "lastModificationDate": 1762391689056,
-      "contentHash": "53afa19b446a7b49a624afc5d40ac227",
+      "lastModificationDate": 1763824039822,
+      "contentHash": "c85e28972111397253ff2be2b8b9287e",
       "sourceName": "@fhevm/solidity/config/ZamaConfig.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -85,7 +85,6 @@
         }
       },
       "imports": [
-        "@zama-fhe/oracle-solidity/address/ZamaOracleAddress.sol",
         "@fhevm/solidity/lib/FHE.sol",
         "@fhevm/solidity/lib/Impl.sol"
       ],
@@ -93,59 +92,8 @@
         "^0.8.24"
       ],
       "artifacts": [
-        "EthereumConfig",
-        "SepoliaConfig",
-        "ZamaConfig"
-      ]
-    },
-    "/Users/nguyentuancanh/Documents/zama/fhevm-snake/node_modules/.pnpm/@fhevm+solidity@0.8.0/node_modules/@fhevm/solidity/lib/FHE.sol": {
-      "lastModificationDate": 1762387826262,
-      "contentHash": "4595eb92a31223262d4e29a27c938d97",
-      "sourceName": "@fhevm/solidity/lib/FHE.sol",
-      "solcConfig": {
-        "version": "0.8.27",
-        "settings": {
-          "metadata": {
-            "bytecodeHash": "none",
-            "useLiteralContent": true
-          },
-          "optimizer": {
-            "enabled": true,
-            "runs": 800
-          },
-          "evmVersion": "cancun",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./Impl.sol",
-        "./FheType.sol",
-        "encrypted-types/EncryptedTypes.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.24"
-      ],
-      "artifacts": [
-        "FHE",
-        "IDecryptionOracle",
-        "IKMSVerifier"
+        "ZamaConfig",
+        "ZamaEthereumConfig"
       ]
     },
     "/Users/nguyentuancanh/Documents/zama/fhevm-snake/packages/hardhat/fhevmTemp/@zama-fhe/oracle-solidity/address/ZamaOracleAddress.sol": {
@@ -190,9 +138,100 @@
       ],
       "artifacts": []
     },
-    "/Users/nguyentuancanh/Documents/zama/fhevm-snake/node_modules/.pnpm/@fhevm+solidity@0.8.0/node_modules/@fhevm/solidity/lib/Impl.sol": {
-      "lastModificationDate": 1762387826262,
-      "contentHash": "82d95a375319ded89a84a9323575b351",
+    "/Users/nguyentuancanh/Documents/zama/fhevm-snake/node_modules/.pnpm/encrypted-types@0.0.4/node_modules/encrypted-types/EncryptedTypes.sol": {
+      "lastModificationDate": 1762387826263,
+      "contentHash": "521a624fad71cd29fc4b7c443b41bb86",
+      "sourceName": "encrypted-types/EncryptedTypes.sol",
+      "solcConfig": {
+        "version": "0.8.27",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "evmVersion": "cancun",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": []
+    },
+    "/Users/nguyentuancanh/Documents/zama/fhevm-snake/node_modules/.pnpm/@fhevm+solidity@0.9.1/node_modules/@fhevm/solidity/lib/FHE.sol": {
+      "lastModificationDate": 1763823440571,
+      "contentHash": "a3654ad3694e201ea093182154462272",
+      "sourceName": "@fhevm/solidity/lib/FHE.sol",
+      "solcConfig": {
+        "version": "0.8.27",
+        "settings": {
+          "metadata": {
+            "bytecodeHash": "none",
+            "useLiteralContent": true
+          },
+          "optimizer": {
+            "enabled": true,
+            "runs": 800
+          },
+          "evmVersion": "cancun",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata",
+                "devdoc",
+                "userdoc",
+                "storageLayout",
+                "evm.gasEstimates"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Impl.sol",
+        "./FheType.sol",
+        "encrypted-types/EncryptedTypes.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.24"
+      ],
+      "artifacts": [
+        "FHE",
+        "IKMSVerifier"
+      ]
+    },
+    "/Users/nguyentuancanh/Documents/zama/fhevm-snake/node_modules/.pnpm/@fhevm+solidity@0.9.1/node_modules/@fhevm/solidity/lib/Impl.sol": {
+      "lastModificationDate": 1763823440572,
+      "contentHash": "6039bec93defbef7e3e2729c62b95194",
       "sourceName": "@fhevm/solidity/lib/Impl.sol",
       "solcConfig": {
         "version": "0.8.27",
@@ -239,50 +278,8 @@
         "Impl"
       ]
     },
-    "/Users/nguyentuancanh/Documents/zama/fhevm-snake/node_modules/.pnpm/encrypted-types@0.0.4/node_modules/encrypted-types/EncryptedTypes.sol": {
-      "lastModificationDate": 1762387826263,
-      "contentHash": "521a624fad71cd29fc4b7c443b41bb86",
-      "sourceName": "encrypted-types/EncryptedTypes.sol",
-      "solcConfig": {
-        "version": "0.8.27",
-        "settings": {
-          "metadata": {
-            "bytecodeHash": "none",
-            "useLiteralContent": true
-          },
-          "optimizer": {
-            "enabled": true,
-            "runs": 800
-          },
-          "evmVersion": "cancun",
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata",
-                "devdoc",
-                "userdoc",
-                "storageLayout",
-                "evm.gasEstimates"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "^0.8.24"
-      ],
-      "artifacts": []
-    },
-    "/Users/nguyentuancanh/Documents/zama/fhevm-snake/node_modules/.pnpm/@fhevm+solidity@0.8.0/node_modules/@fhevm/solidity/lib/FheType.sol": {
-      "lastModificationDate": 1762387826262,
+    "/Users/nguyentuancanh/Documents/zama/fhevm-snake/node_modules/.pnpm/@fhevm+solidity@0.9.1/node_modules/@fhevm/solidity/lib/FheType.sol": {
+      "lastModificationDate": 1763823440571,
       "contentHash": "65f472a3e319ba73ac6b19a5e8660d15",
       "sourceName": "@fhevm/solidity/lib/FheType.sol",
       "solcConfig": {
